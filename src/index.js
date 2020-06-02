@@ -52,5 +52,5 @@ function  fetchDogBreeds(){
 document.addEventListener('DOMContentLoaded', (e) => {
   getDog();
   //getBreed();
-  fetchDogBreeds
+  fetchDogBreeds();
 });
