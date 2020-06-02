@@ -27,7 +27,7 @@ function getBreed() {
         dogs.message.forEach((dogBreed) => {
 let breedListItem = document.createElement('li');
 breedListItem.innerText  = dogBreed;
-breedList.appendChild(breedListItem);}
+breedList.appendChild(breedListItem);})
 breedList.addEventListener('click',()=>{
         breedListItem.style.color = 'red';
       })
@@ -38,9 +38,6 @@ breedList.addEventListener('click',()=>{
             breedList.appendChild(dogBreed);
           }
         })
-
-            )
-
 
        })
 }
