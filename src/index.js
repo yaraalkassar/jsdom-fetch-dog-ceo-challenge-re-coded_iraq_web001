@@ -24,10 +24,10 @@ function getBreed() {
    .then(dogs => {
      let breedList = document.querySelector('#dog-breeds');
      let breedDropdown = document.querySelector('#breed-dropdown');
-     for (const key in dogs.message){
+     for (const dogBreed in dogs.message){
        let breed = document.createElement('li');
        breed.classList.add('breed')
-       breed.innerText = key;
+       breed.innerText = dogBreed;
        breedList.appendChild(breed);
        breed.addEventListener('click', () => breed.style.color = 'red')
 
