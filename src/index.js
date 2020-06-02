@@ -17,7 +17,7 @@ function getBreed() {
   return fetch(breedUrl)
   .then(response => response.json())
   then(dogs => {
-        dogs.message.forEach((dog) => {
+        dogs.message.forEach((dogBreed) => {
          console.log(dogBreed);
          let breedContainer = document.querySelector('#dog-breeds');
            let breedList = document.querySelector('#breed-dropdown');
