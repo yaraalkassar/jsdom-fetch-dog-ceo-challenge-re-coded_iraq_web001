@@ -27,7 +27,7 @@ function getBreed() {
      for (const dogBreed in dogs.message){
        let breed = document.createElement('li');
        breed.classList.add('breed')
-       breed.innerText = dogBreed;
+       breed.innerHTML = dogBreed;
        breedList.appendChild(breed);
        breed.addEventListener('click', () => breed.style.color = 'red')
 
