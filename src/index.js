@@ -31,7 +31,7 @@ breedList.addEventListener('click',()=>{
       breedDropdownList.addEventListener('change', (event) => {
           dogBreed.remove();
           if (dogBreed.innerText.charAt(0) == event.target.value){
-            breedList.appendChild(breed);
+            breedList.appendChild(dogBreed);
           }
         })
 
