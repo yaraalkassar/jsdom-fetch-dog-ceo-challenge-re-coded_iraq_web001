@@ -28,7 +28,7 @@ function getBreed() {
          console.log(dogBreed);
 
 let breedListItem = document.createElement('li');
-breedListItem.innerHTML = dogBreed;
+breedListItem.innerText  = dogBreed;
 breedList.appendChild(breedListItem);
 breedList.addEventListener('click',()=>{
         breedListItem.style.color = 'red';
