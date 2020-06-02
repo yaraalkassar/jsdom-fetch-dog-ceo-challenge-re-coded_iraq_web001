@@ -21,10 +21,10 @@ function getBreed() {
   const breedUrl = 'https://dog.ceo/api/breeds/list/all'
    fetch(breedUrl)
    .then(response => response.json())
-   .then(result => {
+   .then(dogs => {
      let breedList = document.querySelector('#dog-breeds');
      let breedDropdown = document.querySelector('#breed-dropdown');
-     for (const key in result.message){
+     for (const key in dogs.message){
        let breed = document.createElement('li');
        breed.classList.add('breed')
        breed.innerText = key;
