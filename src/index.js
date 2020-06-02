@@ -6,7 +6,6 @@ let imgContainer = document.getElementById('dog-image-container');
 .then(response => response.json())
 .then(dogs => {
       dogs.message.forEach((dog) => {
-      console.log(dog);
         image = document.createElement('img');
             image.src = dog;
             image.width= 200;
