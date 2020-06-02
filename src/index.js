@@ -8,6 +8,7 @@ let imgContainer = document.getElementById('dog-image-container');
       dogs.message.forEach((dog) => {
         image = document.createElement('img');
             image.src = dog;
+            image.width= 200;
             imgContainer.appendChild(image);
       })
     })
