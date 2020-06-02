@@ -31,10 +31,10 @@ function getBreed() {
        breedListItem.addEventListener('click', () =>
         breedListItem.style.color = 'red')
 
-       breedDropdownList.addEventListener('change', (event) => {
-         breed.remove();
-         if (breed.innerText.charAt(0) == event.target.value){
-           breedList.appendChild(breed);
+       breedDropdownList.addEventListener('change', (e) => {
+         breedListItem.remove();
+         if (breedListItem.innerText.charAt(0) == event.target.value){
+           breedList.appendChild(breedListItem);
          }
        })
      }
