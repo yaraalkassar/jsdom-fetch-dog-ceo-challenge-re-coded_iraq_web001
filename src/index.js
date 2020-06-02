@@ -21,11 +21,10 @@ function getBreed() {
   const breedUrl = 'https://dog.ceo/api/breeds/list/all'
    fetch(breedUrl)
    .then(response => response.json())
-   .then(dog => {
+   .then(dogs => {
      let breedList = document.querySelector('#dog-breeds');
      let breedDropdownList = document.querySelector('#breed-dropdown');
-     //for (const dogBreed in dogs.message){
-     dog.message.forEach(dogBreed => {
+     for (const dogBreed in dogs.message){
        let breedListItem = document.createElement('li');
        breedListItem.innerHTML = dogBreed;
        breedList.appendChild(breedListItem);
@@ -38,7 +37,7 @@ function getBreed() {
            breedList.appendChild(breedListItem);
          }
        })
-     })
+     }
    })
 }
 
