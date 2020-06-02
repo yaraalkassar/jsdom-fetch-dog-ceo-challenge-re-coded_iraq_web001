@@ -31,7 +31,7 @@ let breedListItem = document.createElement('li');
 breedListItem.innerHTML = dogBreed;
 breedList.appendChild(breedListItem);
 breedList.addEventListener('click',()=>{
-        breedList.style.color = 'red';
+        breedListItem.style.color = 'red';
       })
 
       breedDropdownList.addEventListener('change', (event) => {
