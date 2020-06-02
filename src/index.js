@@ -23,4 +23,4 @@ function getBreed() {
 
 document.addEventListener('DOMContentLoaded', (event) => {
   getDog();
-};
+});
