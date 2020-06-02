@@ -6,6 +6,10 @@ const imgUrl = "https://dog.ceo/api/breeds/image/random/4";
 let imgContainer = document.getElementById('dog-image-container');
 fetch(imgUrl)
 .then(response => response.json())
-then(data =>{
-  for(const img of data.)
+.then((dogs) => {
+        dogs.forEach((dog) => {
+          img = document.createElement('img');
+              img.src = dog;
+              imageContainer.appendChild(img);
+        })
 }};
