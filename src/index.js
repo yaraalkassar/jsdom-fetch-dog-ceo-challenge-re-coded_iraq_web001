@@ -16,7 +16,7 @@ function getBreed() {
   const breedUrl = 'https://dog.ceo/api/breeds/list/all';
   return fetch(breedUrl)
   .then(response => response.json())
-  .then(dog => { 
+  .then(dog => {
       dog.message.forEach((dogBreed) => {
          console.log(dogBreed);
          let breedContainer = document.querySelector('#dog-breeds');
