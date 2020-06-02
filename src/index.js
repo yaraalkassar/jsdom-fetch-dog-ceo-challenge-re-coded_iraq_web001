@@ -26,14 +26,6 @@ breedList.appendChild(breedListItem);
 breedList.addEventListener('click',()=>{
         breedList.style.color = 'red';
       })
-
-
-
-
-
-)
-
-
        })
      })
 }
