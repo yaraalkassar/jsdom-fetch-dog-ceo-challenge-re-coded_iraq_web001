@@ -23,9 +23,9 @@ function getBreed() {
   .then(response => response.json())
   then(dogs => {
     let breedList = document.querySelector('#dog-breeds');
-        dogs.message.forEach((dogBreed) => {
+        dogs.['message'].forEach((dogBreed) => {
 let breedListItem = document.createElement('li');
-breedListItem.innerText  = dogBreed;
+breedListItem.innerText  = `dogBreed`;
 breedList.appendChild(breedListItem);
 
 breedList.addEventListener('click',()=>{
