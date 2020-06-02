@@ -23,7 +23,7 @@ return  fetch(breedUrl)
   .then(dog=>{
     let dogBreedUl = document.querySelector('#dog-breeds');
     let breedDropdown=document.querySelector('#breed-dropdown');
-    fdogs.message.forEach((dogBreed) =>{
+    dogs.message.forEach((dogBreed) =>{
       let breedLi = document.createElement('li');
       breedLi.innerText = breed;
       dogBreedUl.appendChild(breedLi);
