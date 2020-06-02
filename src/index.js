@@ -24,7 +24,8 @@ function getBreed() {
    .then(dogs => {
      let breedList = document.querySelector('#dog-breeds');
      let breedDropdownList = document.querySelector('#breed-dropdown');
-     for (const dogBreed in dogs.message){
+     //for (const dogBreed in dogs.message){
+     dogs.message.forEach((dogBreed) => {
        let breedListItem = document.createElement('li');
        breedListItem.innerHTML = dogBreed;
        breedList.appendChild(breedListItem);
@@ -37,7 +38,7 @@ function getBreed() {
            breedList.appendChild(breedListItem);
          }
        })
-     }
+     })
    })
 }
 
