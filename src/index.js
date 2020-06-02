@@ -25,7 +25,7 @@ function getBreed() {
     let breedDropdownList=document.querySelector('#breed-dropdown');
         dogs.message.forEach((dogBreed) => {
          console.log(dogBreed);
-         
+
 let breedListItem = document.createElement('li');
 breedListItem.innerHTML = dogBreed;
 breedList.appendChild(breedListItem);
