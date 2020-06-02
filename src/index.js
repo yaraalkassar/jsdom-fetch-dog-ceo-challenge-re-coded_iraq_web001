@@ -28,13 +28,12 @@ breedList.addEventListener('click',()=>{
         breedList.style.color = 'red';
       })
 
-      breedDropdown.addEventListener('change', (event) =>{
-              breedLi.remove();
-              if(breedLi.innerText.charAt(0)===event.target.value){
-
-                dogBreedUl.appendChild(breedLi);
-
-              }
+      breedDropdown.addEventListener('change', (event) => {
+          breed.remove();
+          if (breed.innerText.charAt(0) == event.target.value){
+            breedContainer.appendChild(breed);
+          }
+        })
 
             })
 
