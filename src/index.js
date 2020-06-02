@@ -13,11 +13,11 @@ let imgContainer = document.getElementById('dog-image-container');
     })
 }
 function getBreed() {
-  const breedUrl = 'https://dog.ceo/api/breeds/list/all'
+  const breedUrl = 'https://dog.ceo/api/breeds/list/all';
   return fetch(breedUrl)
   .then(response => response.json())
-  .then(dog => {
-       dog.message.forEach((dogBreed) => {
+  .then(dog => { 
+      dog.message.forEach((dogBreed) => {
          console.log(dogBreed);
          let breedContainer = document.querySelector('#dog-breeds');
            let breedList = document.querySelector('#breed-dropdown');
@@ -30,11 +30,6 @@ breedList.addEventListener('click',()=>{
        })
      })
 }
-
-
-
-
-
 
 document.addEventListener('DOMContentLoaded', (event) => {
   getDog();
