@@ -30,7 +30,7 @@ breedList.addEventListener('click',()=>{
      })
 }
 
-document.addEventListener('DOMContentLoaded',  => {
+document.addEventListener('DOMContentLoaded', (e) => {
   getDog();
   getBreed();
 });
