@@ -8,8 +8,8 @@ fetch(imgUrl)
 .then(response => response.json())
 .then((dogs) => {
         dogs.forEach((dog) => {
-          img = document.createElement('img');
-              img.src = dog;
-              imageContainer.appendChild(img);
+          image = document.createElement('img');
+              image.src = dog;
+              imageContainer.appendChild(image);
         })
 }};
