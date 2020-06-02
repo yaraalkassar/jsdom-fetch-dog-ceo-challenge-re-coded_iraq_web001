@@ -30,7 +30,7 @@ function getBreed() {
        breed.innerText = key;
        breedContainer.appendChild(breed);
        breed.addEventListener('click', () => breed.style.color = 'red')
- 
+
        breedDropdown.addEventListener('change', (event) => {
          breed.remove();
          if (breed.innerText.charAt(0) == event.target.value){
