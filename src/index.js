@@ -12,36 +12,45 @@ let imgContainer = document.getElementById('dog-image-container');
       })
     })
 }
-function getBreed() {
-  const breedUrl = 'https://dog.ceo/api/breeds/list/all';
-  return fetch(breedUrl)
-  .then(response => response.json())
-  then(dogs => {
-        dogs.message.forEach((dogBreed) => {
-         console.log(dogBreed);
-         let breedList = document.querySelector('#dog-breeds');
-         let breedDropdownList=document.querySelector('#breed-dropdown');
-let breedListItem = document.createElement('li');
-breedListItem.innerHTML = dogBreed;
-breedList.appendChild(breedListItem);
-breedList.addEventListener('click',()=>{
-        breedList.style.color = 'red';
+
+
+
+
+function  fetchDogBreeds(){
+
+  fetch(breedUrl)
+  .then(resp=> resp.json())
+  .then(json=>{
+    let dogBreedUl = document.querySelector('#dog-breeds');
+    let breedDropdown=document.querySelector('#breed-dropdown');
+    for (const breed in json['message']){
+      let breedLi = document.createElement('li');
+      breedLi.innerText = breed;
+      dogBreedUl.appendChild(breedLi);
+
+      breedLi.addEventListener('click',()=>{
+        breedLi.style.color = 'red';
       })
 
-      breedDropdownList.addEventListener('change', (event) => {
-          dogBreed.remove();
-          if (dogBreed.innerText.charAt(0) == event.target.value){
-            breedList.appendChild(dogBreed);
-          }
-        })
+      breedDropdown.addEventListener('change', (event) =>{
+        breedLi.remove();
+        if(breedLi.innerText.charAt(0)===event.target.value){
 
-            })
+          dogBreedUl.appendChild(breedLi);
+
+        }
+
+      })
 
 
-       })
+
+    }
+  })
 }
+
 
 document.addEventListener('DOMContentLoaded', (e) => {
   getDog();
-  getBreed();
+  //getBreed();
+  fetchDogBreeds
 });
