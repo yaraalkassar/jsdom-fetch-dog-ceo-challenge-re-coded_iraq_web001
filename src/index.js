@@ -31,14 +31,14 @@ breedList.addEventListener('click',()=>{
       breedDropdown.addEventListener('change', (event) =>{
               breedLi.remove();
               if(breedLi.innerText.charAt(0)===event.target.value){
-      
+
                 dogBreedUl.appendChild(breedLi);
-      
+
               }
-      
+
             })
 
-      
+
        })
      })
 }
