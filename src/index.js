@@ -22,8 +22,8 @@ function getBreed() {
   return fetch(breedUrl)
   .then(response => response.json())
   then(dogs => {
+        dogs.message.forEach((dog) => {
     let breedList = document.querySelector('#dog-breeds');
-     for (const dogBreed in dogs.message){
           console.log(dogBreed);
 let breedListItem = document.createElement('li');
 breedListItem.innerText  = dogBreed;
@@ -33,7 +33,7 @@ breedList.addEventListener('click',()=>{
         breedListItem.style.color = 'red';
       })
 
-       }
+       })
        })
 }
 
