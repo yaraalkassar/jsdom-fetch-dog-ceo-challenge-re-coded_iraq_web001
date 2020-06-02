@@ -48,6 +48,5 @@ breedList.addEventListener('click',()=>{
 
 document.addEventListener('DOMContentLoaded', (e) => {
   getDog();
-  //getBreed();
-  fetchDogBreeds();
+  getBreed();
 });
