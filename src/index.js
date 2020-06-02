@@ -24,7 +24,7 @@ function getBreed() {
   then(dogs => {
     let breedList = document.querySelector('#dog-breeds');
         dogs.message.forEach((dogBreed) => {
-          console.log(dogBreed)
+          console.log(dogBreed);
 let breedListItem = document.createElement('li');
 breedListItem.innerText  = dogBreed;
 breedList.appendChild(breedListItem);
