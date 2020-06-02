@@ -18,10 +18,11 @@ function getBreed() {
   .then(response => response.json())
   .then((breed) => {
        breed.message.forEach((dogBreed) => {
+         console.log(dogBreed);
          let breedContainer = document.querySelector('#dog-breeds');
            let breedList = document.querySelector('#breed-dropdown');
 let breedListItem = document.createElement('li');
-breedListItem.innerHTML = `${dogBreed}`;
+breedListItem.innerHTML = dogBreed;
 breedList.appendChild(breedListItem);
 breedList.addEventListener('click',()=>{
         breedList.style.color = 'red';
