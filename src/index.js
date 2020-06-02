@@ -5,7 +5,7 @@ let imgContainer = document.getElementById('dog-image-container');
  return fetch(imgUrl)
 .then(response => response.json())
 .then((dogs) => {
-      dogs.forEach((dog) => {
+      dogs.message.forEach((dog) => {
         image = document.createElement('img');
             image.src = dog;
             imageContainer.appendChild(image);
@@ -18,6 +18,8 @@ function getBreed() {
   .then(response => response.json())
   .then((breed) => {
        breed.forEach((dogBreed) => {
+return fetch(breedUrl)
+
 
        })
      })
@@ -47,7 +49,7 @@ function getBreed() {
       });
       inputVal.value = "";
     });
-}
+
 
 
 
