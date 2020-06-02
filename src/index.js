@@ -14,7 +14,15 @@ let imgContainer = document.getElementById('dog-image-container');
 }
 function getBreed() {
   const breedUrl = 'https://dog.ceo/api/breeds/list/all'
-
+  return fetch(breedUrl)
+  .then(response => response.json())
+  .then((dogs) => {
+       dogs.forEach((dog) => {
+         image = document.createElement('img');
+             image.src = dog;
+             imageContainer.appendChild(image);
+       })
+     })
 }
 
 
