@@ -20,12 +20,25 @@ function getBreed() {
         dogs.message.forEach((dogBreed) => {
          console.log(dogBreed);
          let breedList = document.querySelector('#dog-breeds');
+         let breedDropdown=document.querySelector('#breed-dropdown');
 let breedListItem = document.createElement('li');
 breedListItem.innerHTML = dogBreed;
 breedList.appendChild(breedListItem);
 breedList.addEventListener('click',()=>{
         breedList.style.color = 'red';
       })
+
+      breedDropdown.addEventListener('change', (event) =>{
+              breedLi.remove();
+              if(breedLi.innerText.charAt(0)===event.target.value){
+      
+                dogBreedUl.appendChild(breedLi);
+      
+              }
+      
+            })
+
+      
        })
      })
 }
