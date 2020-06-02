@@ -39,7 +39,6 @@ breedList.addEventListener('click',()=>{
 
 
        })
-     })
 }
 
 document.addEventListener('DOMContentLoaded', (e) => {
