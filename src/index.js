@@ -33,7 +33,7 @@ function getBreed() {
 
        breedDropdownList.addEventListener('change', (e) => {
          breedListItem.remove();
-         if (breedListItem.innerText.charAt(0) == event.target.value){
+         if (breedListItem.innerText.charAt(0) == e.target.value){
            breedList.appendChild(breedListItem);
          }
        })
