@@ -9,7 +9,7 @@ fetch(imgUrl)
         image = document.createElement('img');
             image.src = dog;
             imageContainer.appendChild(image);
-      })}
+      })})
 }
 function getBreed() {
   const breedUrl = 'https://dog.ceo/api/breeds/list/all'
