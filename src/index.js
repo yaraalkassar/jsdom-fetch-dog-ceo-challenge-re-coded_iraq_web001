@@ -21,11 +21,11 @@ function getBreed() {
   const breedUrl = 'https://dog.ceo/api/breeds/list/all'
    fetch(breedUrl)
    .then(response => response.json())
-   .then(dogs => {
+   .then(dog => {
      let breedList = document.querySelector('#dog-breeds');
      let breedDropdownList = document.querySelector('#breed-dropdown');
      //for (const dogBreed in dogs.message){
-     dogs.message.forEach(dogBreed => {
+     dog.message.forEach(dogBreed => {
        let breedListItem = document.createElement('li');
        breedListItem.innerHTML = dogBreed;
        breedList.appendChild(breedListItem);
