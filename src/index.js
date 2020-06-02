@@ -23,7 +23,7 @@ function getBreed() {
   .then(response => response.json())
   then(dogs => {
     let breedList = document.querySelector('#dog-breeds');
-        dogs.message.forEach((dogBreed) => {
+     for (const dogBreed in dogs.message){
           console.log(dogBreed);
 let breedListItem = document.createElement('li');
 breedListItem.innerText  = dogBreed;
