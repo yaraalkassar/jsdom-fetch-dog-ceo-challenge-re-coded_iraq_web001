@@ -33,7 +33,7 @@ breedList.addEventListener('click',()=>{
         breedListItem.style.color = 'red';
       })
 
-       })
+       }
        })
 }
 
