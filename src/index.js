@@ -18,7 +18,7 @@ let imgContainer = document.getElementById('dog-image-container');
 
 function  fetchDogBreeds(){
   const breedUrl = 'https://dog.ceo/api/breeds/list/all';
-  fetch(breedUrl)
+return  fetch(breedUrl)
   .then(resp=> resp.json())
   .then(json=>{
     let dogBreedUl = document.querySelector('#dog-breeds');
