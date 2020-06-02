@@ -23,14 +23,15 @@ function getBreed() {
    .then(response => response.json())
    .then(dogs => {
      let breedList = document.querySelector('#dog-breeds');
-     let breedDropdown = document.querySelector('#breed-dropdown');
+     let breedDropdownList = document.querySelector('#breed-dropdown');
      for (const dogBreed in dogs.message){
        let breedListItem = document.createElement('li');
        breedListItem.innerHTML = dogBreed;
        breedList.appendChild(breedListItem);
-       breedListItem.addEventListener('click', () => breedListItem.style.color = 'red')
+       breedListItem.addEventListener('click', () =>
+        breedListItem.style.color = 'red')
 
-       breedDropdown.addEventListener('change', (event) => {
+       breedDropdownList.addEventListener('change', (event) => {
          breed.remove();
          if (breed.innerText.charAt(0) == event.target.value){
            breedList.appendChild(breed);
